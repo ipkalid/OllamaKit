@@ -6,12 +6,12 @@
 //
 
 import Foundation
-public struct Message: Codable {
+public struct Message: Codable, Hashable {
     /// A ``Role`` value indicating the sender of the message (system, assistant, user).
     public let role: Role
 
     /// A string containing the message's content.
-    public let content: String
+    public var content: String
 
     /// An optional array of base64-encoded images.
     public let images: [String]?
